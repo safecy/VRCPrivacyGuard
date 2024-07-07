@@ -1,3 +1,4 @@
+
 name: 🚀 Release
 
 on:
@@ -19,7 +20,7 @@ jobs:
       - name: 🛠️ Build
         run: cargo build --release --verbose
 
-      - name: 🚀 Release
+      - name: 🚀 Release tag
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
