@@ -10,10 +10,12 @@ on:
 
 jobs:
   list-files:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: 📥 Checkout
       uses: actions/checkout@v1
+    - name: Install Windows target
+      run: rustup target add x86_64-pc-windows-msvc
     - name: 🛠️ Build
       run: cargo build --release --verbose
     - name: List all files in directory
