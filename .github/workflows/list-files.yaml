@@ -14,15 +14,13 @@ jobs:
     steps:
     - name: 📥 Checkout
       uses: actions/checkout@v1
-    - name: Install Windows target
-      run: rustup target add x86_64-pc-windows-msvc
     - name: 🛠️ Build
       run: cargo build --release --verbose
     - name: List all files in directory
       run: |
         echo "Listing all files in the current directory:"
-        ls -al
+        dir
         echo "Listing all files in the ./target directory:"
-        ls -al ./target
+        dir ./target
         echo "Listing all files in the ./target/release directory:"
-        ls -al ./target/release
+        dir ./target/release
