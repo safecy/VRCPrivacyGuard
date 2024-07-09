@@ -1,0 +1,26 @@
+name: List Files in Directory
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 📥 Checkout
+      uses: actions/checkout@v1
+    - name: 🛠️ Build
+      run: cargo build --release --verbose
+    - name: List all files in directory
+      run: |
+        echo "Listing all files in the current directory:"
+        ls -al
+        echo "Listing all files in the ./target directory:"
+        ls -al ./target
+        echo "Listing all files in the ./target/release directory:"
+        ls -al ./target/release
