@@ -30,7 +30,7 @@ This project fetches a list of blocked domains from a specified URL and allows t
 ## Usage
 
 1. **Download VRCPrivacyGuard**: 
-   - Download `VRCPrivacyGuard.exe` from the latest release on GitHub.
+   - Download `VRCPrivacyGuard.exe` from the latest [release](https://github.com/safecy/VRCPrivacyGuard/releases) on GitHub.
 
 2. **Run with Admin Privileges**:
    - Right-click `VRCPrivacyGuard.exe` and select "Run as administrator" to ensure proper access to modify system files.
